@@ -37,6 +37,7 @@ class Index extends React.Component {
         login({...values, password: MD5(values.password), key: this.state.key}).then(res => {
           if (res.code === 200) {
             sessionStorage.setItem('token', res.data.token);
+            sessionStorage.setItem('head_img', res.data.head_img);
             sessionStorage.setItem('name', res.data.name);
             sessionStorage.setItem('user', res.data.user);
             sessionStorage.setItem('id', res.data.id);
@@ -188,7 +189,7 @@ class Index extends React.Component {
                 {getFieldDecorator('code', {
                   rules: [{required: true, message: '请输入验证码!'}],
                 })(
-                  <Input len={4} prefix={<Icon type="lock" style={{fontSize: 13}}/>} placeholder="验证码"/>
+                  <Input len={4} prefix={<Icon type="safety" style={{fontSize: 13}}/>} placeholder="验证码"/>
                 )}
                 <Tooltip placement="right" title="刷新">
                   <span className={css.code_svg} ref='code' onClick={this.getCode}>&nbsp;</span>

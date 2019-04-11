@@ -87,8 +87,8 @@ export default class Index extends React.Component {
     }
     // TODO: 文件名称验证
     if (name.length) {
-      add({name: name}).then(ret => {
-        if (ret) {
+      add({name: name}).then(res => {
+        if (res) {
           this.state.modelSta = false;
           this.getCatalog(catalog.url)
         }
@@ -110,8 +110,8 @@ export default class Index extends React.Component {
     }
     // TODO: 文件名称验证
     if (name.length && newName) {
-      edit({name: name, newName: newName}).then(ret => {
-        if (ret) {
+      edit({name: name, newName: newName}).then(res => {
+        if (res) {
           this.state.modelSta = false;
           this.getCatalog(catalog.url)
         }
