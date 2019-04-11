@@ -1,0 +1,28 @@
+@import "./theme";
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 14px !important;
+  overflow: hidden;
+  min-width: 1200px;
+  font-family: Arial;
+  line-height: 1.5;
+}
+
+.statement {
+  color: $danger_hover;
+  position: fixed;
+  font-size: 12px;
+  background-color: $def_hover;
+  padding: 4px 10px;
+  right: 0;
+  z-index: 999;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.statement:hover {
+  color: $def_hover;
+  background-color: $danger_hover;
+}

@@ -1,0 +1,157 @@
+@import "../../theme";
+
+.up_box {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.up_box_sty {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 5px dashed $success_hover;
+  box-sizing: border-box;
+
+  div {
+    text-align: center;
+    font-size: 24px;
+    position: relative;
+    margin-top: 50%;
+  }
+}
+
+.up_file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  outline: none;
+}
+
+.file_model {
+  overflow-x: hidden;
+  position: fixed;
+  right: -601px;
+  height: calc(100vh - 60px);
+  top: 60px;
+  padding-left: 20px;
+  overflow-y: auto;
+  transition: all .3s;
+
+  .colse {
+    cursor: pointer;
+    transform: rotate(270deg);
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    color: $def_hover;
+    line-height: 20px;
+    background-color: $def_hover;
+    position: absolute;
+    left: -5px;
+    top: 50%;
+
+    .colse_t {
+      height: 2px;
+      display: inline-block;
+      box-shadow: 0px 1px 0px #9c9c9c;
+      width: 32px;
+      position: absolute;
+      z-index: 1;
+      top: -2px;
+      left: -1px;
+    }
+
+    .colse_i {
+      color: #9c9c9c;
+      font-size: 20px;
+      margin-top: 2px;
+      transform: rotate(0deg);
+      transition: all .3s;
+      transition-delay: .3s;
+    }
+  }
+
+  .colse:before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 20px;
+    position: absolute;
+    -webkit-transform: skewX(-30deg);
+    transform: skewX(-30deg);
+    background: $def_hover;
+    left: -6px;
+    top: 0;
+    box-shadow: -1px -1px 1px #9c9c9c;
+  }
+
+  .colse:after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 20px;
+    position: absolute;
+    -webkit-transform: skewX(30deg);
+    transform: skewX(30deg);
+    background: $def_hover;
+    top: 0;
+    right: -6px;
+    box-shadow: 1px -1px 1px #9c9c9c;
+  }
+}
+
+.up_file_model {
+  background: #fff;
+  min-height: 100%;
+  height: 100%;
+  width: 600px;
+  padding: 20px;
+  box-shadow: 0 1px 1px;
+  overflow: auto;
+
+  .alert {
+    margin-bottom: 10px;
+  }
+
+  table {
+    width: 100%;
+    min-width: 366px;
+    border-collapse: collapse;
+  }
+
+  th {
+    font-weight: 500;
+    font-size: 12px;
+    border: 1px solid #ebebeb;
+    line-height: 30px;
+    background-color: $def;
+    //width: 20%;
+  }
+
+  td {
+    font-size: 12px;
+    border: 1px solid #ebebeb;
+    text-align: center;
+    //width: 20%;
+    padding: 0 10px;
+  }
+
+  tbody tr:hover {
+    border-left: 2px solid $danger;
+    box-sizing: border-box;
+  }
+
+  tr:hover td {
+    background-color: #fbe7e7;
+  }
+}

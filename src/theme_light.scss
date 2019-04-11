@@ -1,0 +1,157 @@
+$def: #f1f1f1;
+$def_hover: #fff;
+$deep: #999;
+$deep_hover: #000;
+$warn: #fda82a;
+$warn_hover: #FF9800;
+$info: #62a3ff;
+$info_hover: #3b8cff;
+$success: #60c364;
+$success_hover: #4CAF50;
+$danger: #f36257;
+$danger_hover: #F44336;
+$radius: 4px;
+
+.def {
+  color: $def;
+}
+
+.def_hover {
+  color: $def_hover;
+}
+
+.deep {
+  color: $deep;
+}
+
+.deep_hover {
+  color: $deep_hover;
+}
+
+.warn {
+  color: $warn;
+}
+
+.warn_hover {
+  color: $warn_hover;
+}
+
+.info {
+  color: $info;
+}
+
+.info_hover {
+  color: $info_hover;
+}
+
+.success {
+  color: $success;
+}
+
+.success_hover {
+  color: $success_hover;
+}
+
+.danger {
+  color: $danger;
+}
+
+.danger_hover {
+  color: $danger_hover;
+}
+
+@mixin def_btn {
+  padding: 4px 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all .3s;
+  margin-right: 4px;
+  height: 30px;
+  box-sizing: border-box;
+}
+
+.def_btn {
+  @include def_btn;
+  color: $info;
+  background: $def;
+  border: 1px solid $info_hover;
+
+  &:hover {
+    color: $info_hover;
+    background: $def_hover;
+    box-shadow: 0 0 5px $info_hover;
+  }
+}
+
+.warn_btn {
+  @include def_btn;
+  color: $def;
+  background: $warn;
+  border: 1px solid $warn_hover;
+
+  &:hover {
+    color: $def_hover;
+    background: $warn_hover;
+    box-shadow: 0 0 5px $warn_hover;
+  }
+}
+
+.info_btn {
+  @include def_btn;
+  color: $def;
+  background: $info;
+  border: 1px solid $info_hover;
+
+  &:hover {
+    color: $def_hover;
+    background: $info_hover;
+    box-shadow: 0 0 5px $info_hover;
+  }
+}
+
+.success_btn {
+  @include def_btn;
+  color: $def;
+  background: $success;
+  border: 1px solid $success_hover;
+
+  &:hover {
+    color: $def_hover;
+    background: $success_hover;
+    box-shadow: 0 0 5px $success_hover;
+  }
+}
+
+.danger_btn {
+  @include def_btn;
+  color: $def;
+  background: $danger;
+  border: 1px solid $danger_hover;
+
+  &:hover {
+    color: $def_hover;
+    background: $danger_hover;
+    box-shadow: 0 0 5px $danger_hover;
+  }
+}
+
+.bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  background-image: url("https://i.bstu.cn/img/main_bg.jpg");
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+}

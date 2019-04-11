@@ -1,0 +1,77 @@
+@import "../../theme";
+
+.box {
+  margin: 200px auto;
+  padding: 20px 50px;
+  background: $def_hover;
+  opacity: .6;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 50px;
+  transition: opacity .3s;
+
+  button {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.title {
+  margin: 20px auto 30px;
+  text-align: center;
+}
+
+.agreement_model {
+  div[class='ant-modal-body'] {
+    padding: 0 0 0 24px;
+  }
+
+  .agreement {
+    height: 400px;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 2;
+    margin-bottom: 0;
+
+    h3 {
+      text-align: center;
+      font-weight: 600;
+      margin: .5em 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.code {
+  height: 32px;
+
+  span[class='ant-input-affix-wrapper'] {
+    width: 150px;
+    float: left;
+  }
+
+  input {
+    height: 32px;
+  }
+
+  img {
+    cursor: pointer;
+    float: right;
+  }
+
+  .code_svg {
+    cursor: pointer;
+    display: inline-block;
+    height: 32px;
+    float: left;
+    vertical-align: top;
+    border: 1px solid #d9d9d9;
+    margin-left: -1px;
+  }
+}
