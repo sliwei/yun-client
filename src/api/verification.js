@@ -6,7 +6,7 @@ import {Axios as fetch} from 'Public';
  * @param w
  * @param h
  */
-const code = params => fetch('/yun/verification/code', {params: params, type: 'GET'});
+const code = params => fetch('/yun1/verification/code', {params: params, type: 'GET'});
 
 export {
   code,
