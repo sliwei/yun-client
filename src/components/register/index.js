@@ -4,6 +4,7 @@ import {code} from 'Api/verification';
 import {Link} from 'react-router-dom';
 import {Modal, Form, Icon, Input, Button, Checkbox, Tooltip, message} from 'antd';
 import css from './register.scss';
+import MD5 from 'js-md5';
 
 const FormItem = Form.Item;
 
@@ -12,7 +13,8 @@ class Index extends React.Component {
     super(props);
     this.state = {
       visible: false,
-      code: ''
+      code: '',
+      key: ''
     }
   }
 
@@ -21,8 +23,9 @@ class Index extends React.Component {
   }
 
   getCode = () => {
-    code({w: 110, h: 32}).then(ret => {
-      this.refs.code.innerHTML = ret;
+    code({w: 110, h: 32}).then(res => {
+      this.refs.code.innerHTML = res.data.svg;
+      this.state.key = res.data.key;
     })
   };
 
@@ -31,7 +34,7 @@ class Index extends React.Component {
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
-        register(values).then(res => {
+        register({...values, password: MD5(values.password), key: this.state.key}).then(res => {
           if (res.code === 200) {
             this.props.form.resetFields();
             this.getCode();
@@ -40,10 +43,11 @@ class Index extends React.Component {
               content: (
                 <div>
                   <p>注册账号成功。</p>
-                  <a href="#/login">马上登录</a>
                 </div>
               ),
+              okText: '马上登录',
               onOk() {
+                window.location.href = '#/login';
               },
             });
           } else {
@@ -134,13 +138,20 @@ class Index extends React.Component {
         <Form onSubmit={this.handleSubmit}>
           <FormItem>
             {getFieldDecorator('name', {
-              rules: [{required: true, message: '请输入用户名!'}],
+              rules: [{required: true, message: '请输入昵称!'}],
             })(
-              <Input prefix={<Icon type="user" style={{fontSize: 13}}/>} placeholder="用户名"/>
+              <Input prefix={<Icon type="idcard" style={{fontSize: 13}}/>} placeholder="昵称"/>
             )}
           </FormItem>
           <FormItem>
-            {getFieldDecorator('rpassword', {
+            {getFieldDecorator('user', {
+              rules: [{required: true, message: '请输入账号!'}],
+            })(
+              <Input prefix={<Icon type="user" style={{fontSize: 13}}/>} placeholder="账号"/>
+            )}
+          </FormItem>
+          <FormItem>
+            {getFieldDecorator('password', {
               rules: [{required: true, message: '请输入密码!'}],
             })(
               <Input prefix={<Icon type="lock" style={{fontSize: 13}}/>} type="password"
@@ -148,7 +159,7 @@ class Index extends React.Component {
             )}
           </FormItem>
           <FormItem>
-            {getFieldDecorator('rspassword', {
+            {getFieldDecorator('repassword', {
               rules: [{required: true, message: '请再次输入密码!'}],
             })(
               <Input prefix={<Icon type="lock" style={{fontSize: 13}}/>} type="password"
@@ -160,7 +171,7 @@ class Index extends React.Component {
               {getFieldDecorator('code', {
                 rules: [{required: true, message: '请输入验证码!'}],
               })(
-                <Input len={4} prefix={<Icon type="lock" style={{fontSize: 13}}/>} placeholder="验证码"/>
+                <Input len={4} prefix={<Icon type="safety" style={{fontSize: 13}}/>} placeholder="验证码"/>
               )}
               <Tooltip placement="right" title="刷新">
                 <span className={css.code_svg} ref='code' onClick={this.getCode}>&nbsp;</span>
