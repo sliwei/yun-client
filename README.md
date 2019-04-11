@@ -1,5 +1,7 @@
 # 云盘客户端
 
+![http://oss.bstu.cn/images/20190404/1rb3okpl5wv12rwz.png](http://oss.bstu.cn/images/20190404/1rb3okpl5wv12rwz.png)
+
 > 设计仿于百度
 
 ## Dev Setup
