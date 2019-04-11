@@ -1,0 +1,240 @@
+@import "../../theme";
+
+.head {
+  -webkit-app-region: drag;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  color: #fff;
+  display: inline-block;
+
+  .logo {
+    height: 36px;
+    line-height: 36px;
+    margin: 12px;
+  }
+
+  .info {
+    height: 36px;
+    line-height: 36px;
+    margin: 12px;
+
+    span {
+      font-size: 16px;
+      color: $def_hover;
+      cursor: pointer;
+      margin: 0 20px;
+    }
+
+    span:hover {
+      color: $def;
+    }
+  }
+
+  .user {
+    margin-right: 10px;
+
+    .mess {
+      cursor: pointer;
+      height: 60px;
+      display: inline-block;
+
+      .card_up {
+        transition: all .3s;
+        transform: rotate(0deg);
+      }
+
+      .card_up_active {
+        transition: all .3s;
+        transform: rotate(180deg);
+      }
+
+      .mess_card {
+        color: $deep;
+        position: absolute;
+        top: 75px;
+        height: 340px;
+        width: 280px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px $deep;
+        background: $def_hover;
+
+        .seat {
+          position: absolute;
+          top: -15px;
+          height: 15px;
+          width: 100%;
+        }
+
+        .seat:after {
+          position: absolute;
+          display: inline-block;
+          top: 5px;
+          left: 25px;
+          width: 0;
+          height: 0;
+          content: '';
+          border-style: solid;
+          border-width: 10px;
+          border-color: $info_hover $info_hover $info_hover $info_hover;
+          transform: rotate(-45deg);
+          box-shadow: 2px -2px 2px #ccc;
+        }
+
+        .mess_card_info {
+          color: #fff;
+          height: 90px;
+          background: $info_hover;
+          border-radius: 5px 5px 0 0;
+          width: 100%;
+          line-height: 90px;
+        }
+
+        ul {
+          margin: 2px 0 0 0;
+          padding: 0;
+
+          li {
+            list-style: none;
+            line-height: 32px;
+            padding-left: 10px;
+            cursor: pointer;
+          }
+
+          li:hover {
+            background: #f0f6ff;
+          }
+
+          li:last-child {
+            border-radius: 0 0 5px 5px;
+          }
+        }
+      }
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      border-radius: 15px;
+      margin: 0 5px;
+    }
+
+    .download {
+      color: $def_hover;
+    }
+
+    .download:hover {
+      color: $def;
+    }
+
+    .vip {
+      color: #d07d12;
+      padding: 5px 15px;
+      background: #ffd821;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+
+    .vip:hover {
+      background: #f3cd1b;
+    }
+
+    span, .download {
+      margin: 0 5px;
+    }
+  }
+
+  dt {
+    float: left;
+  }
+
+  dd {
+    float: right;
+  }
+}
+
+.right_box {
+  flex: 1;
+  display: flex;
+
+  .menu {
+    width: 180px;
+    height: calc(100vh - 60px);
+    color: $def_hover;
+    position: relative;
+
+    .menu_active {
+      background: rgba(255, 255, 255, .15);
+    }
+
+    a {
+      display: block;
+      height: 42px;
+      color: #ddd;
+      line-height: 42px;
+      margin: 0;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      list-style: none;
+      text-indent: 1rem;
+      cursor: pointer;
+
+      i {
+        width: 34px;
+        font-size: 18px;
+        vertical-align: text-bottom;
+      }
+    }
+
+    li:hover {
+      background: rgba(255, 255, 255, .15);
+    }
+
+    .theme_box {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .content_box {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+
+    .content {
+      height: calc(100% - 30px);
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .agreement {
+      height: 30px;
+      color: #fff;
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

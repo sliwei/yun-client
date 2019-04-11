@@ -1,0 +1,24 @@
+@import "../../theme";
+
+.box {
+  margin: 200px auto;
+  width: 400px;
+  padding: 20px 50px;
+  background: $def_hover;
+  border-radius: 10px;
+
+  button {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+.title {
+  margin: 20px auto 30px;
+  text-align: center;
+}
+
+.agreement {
+  height: 400px;
+  overflow: auto;
+}

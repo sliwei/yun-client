@@ -1,0 +1,146 @@
+@import "../../../theme";
+
+@-webkit-keyframes ain {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.5);
+    transform: scale(.5)
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+@keyframes ain {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.5);
+    -ms-transform: scale(.5);
+    transform: scale(.5)
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+@-webkit-keyframes aout {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(.7);
+    transform: scale(.7)
+  }
+
+  30% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05)
+  }
+
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+@keyframes aout {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(.7);
+    -ms-transform: scale(.7);
+    transform: scale(.7)
+  }
+
+  30% {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05)
+  }
+
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+.close_box {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 14px;
+  color: $def_hover;
+  height: 16px;
+  width: 16px;
+  line-height: initial;
+}
+
+.close_box:hover .close {
+  transform: rotate(135deg);
+}
+
+.close {
+  position: absolute;
+  right: 7px;
+  transform: rotate(45deg);
+  transition: transform .3s;
+  background: $def_hover;
+  height: 16px;
+  width: 2px;
+}
+
+.close:after {
+  background: $def_hover;
+  content: "";
+  height: 2px;
+  left: -7px;
+  position: absolute;
+  top: 7px;
+  width: 16px;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $deep_hover;
+  opacity: 0.3;
+}
+
+@mixin popup {
+  position: fixed;
+  background-color: $def_hover;
+  box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 50px;
+  border-radius: 2px;
+}
+
+.popup_in {
+  @include popup;
+  -webkit-animation: ain .4s;
+  animation: ain .4s;
+}
+
+.popup_out {
+  @include popup;
+  -webkit-animation: aout .4s;
+  animation: aout .4s;
+}
+
+.title {
+  text-align: left;
+  padding: 0 46px 0 20px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: $def_hover;
+  overflow: hidden;
+  background-color: $info_hover;
+  border-radius: 2px 2px 0 0;
+}
