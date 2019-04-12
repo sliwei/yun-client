@@ -16,7 +16,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 5px dashed $success_hover;
+  border: 5px dashed @success_hover;
   box-sizing: border-box;
 
   div {
@@ -41,7 +41,7 @@
   overflow-x: hidden;
   position: fixed;
   right: -601px;
-  height: calc(100vh - 60px);
+  height: e("calc(100vh - 60px)");
   top: 60px;
   padding-left: 20px;
   overflow-y: auto;
@@ -53,9 +53,9 @@
     width: 30px;
     height: 20px;
     text-align: center;
-    color: $def_hover;
+    color: @def_hover;
     line-height: 20px;
-    background-color: $def_hover;
+    background-color: @def_hover;
     position: absolute;
     left: -5px;
     top: 50%;
@@ -89,7 +89,7 @@
     position: absolute;
     -webkit-transform: skewX(-30deg);
     transform: skewX(-30deg);
-    background: $def_hover;
+    background: @def_hover;
     left: -6px;
     top: 0;
     box-shadow: -1px -1px 1px #9c9c9c;
@@ -103,7 +103,7 @@
     position: absolute;
     -webkit-transform: skewX(30deg);
     transform: skewX(30deg);
-    background: $def_hover;
+    background: @def_hover;
     top: 0;
     right: -6px;
     box-shadow: 1px -1px 1px #9c9c9c;
@@ -134,7 +134,7 @@
     font-size: 12px;
     border: 1px solid #ebebeb;
     line-height: 30px;
-    background-color: $def;
+    background-color: @def;
     //width: 20%;
   }
 
@@ -147,7 +147,7 @@
   }
 
   tbody tr:hover {
-    border-left: 2px solid $danger;
+    border-left: 2px solid @danger;
     box-sizing: border-box;
   }
 

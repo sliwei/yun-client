@@ -1,7 +1,7 @@
 import React from 'react';
 import {Popup, FileType} from 'Public'
 import {url, del, edit, add, list} from 'Api/file';
-import css from './home.scss'
+import css from './home.less'
 import Upload from '../upload'
 import {Icon, Checkbox, Tooltip, message} from 'antd'
 

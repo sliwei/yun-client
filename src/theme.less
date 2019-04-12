@@ -1,0 +1,162 @@
+@theme: #3b8cff; // #673AB7
+
+@def: #f1f1f1;
+@def_hover: #fff;
+@deep: #999;
+@deep_hover: #000;
+@warn: #fda82a;
+@warn_hover: #FF9800;
+@info: fade(@theme, 80%);
+@info_hover: @theme;
+@success: #60c364;
+@success_hover: #4CAF50;
+@danger: #f36257;
+@danger_hover: #F44336;
+@radius: 0px;
+
+@primary-color: @info;
+@link-color: @info;
+@processing-color: @info;
+@border-radius-base: @radius;
+
+@theme_img1: url("https://i.bstu.cn/img/b2.jpg") no-repeat center;
+@theme_img2: url("https://i.bstu.cn/img/main_bg.jpg") no-repeat center;
+
+.def {
+  color: @def;
+}
+
+.def_hover {
+  color: @def_hover;
+}
+
+.deep {
+  color: @deep;
+}
+
+.deep_hover {
+  color: @deep_hover;
+}
+
+.warn {
+  color: @warn;
+}
+
+.warn_hover {
+  color: @warn_hover;
+}
+
+.info {
+  color: @info;
+}
+
+.info_hover {
+  color: @info_hover;
+}
+
+.success {
+  color: @success;
+}
+
+.success_hover {
+  color: @success_hover;
+}
+
+.danger {
+  color: @danger;
+}
+
+.danger_hover {
+  color: @danger_hover;
+}
+
+.def_btns {
+  padding: 4px 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all .3s;
+  margin-right: 4px;
+  height: 30px;
+  box-sizing: border-box;
+}
+
+.def_btn {
+  .def_btns();
+  color: @info;
+  background: @def;
+  border: 1px solid @info_hover;
+  border-radius: @radius;
+
+  &:hover {
+    color: @info_hover;
+    background: @def_hover;
+    box-shadow: 0 0 5px @info_hover;
+  }
+}
+
+.warn_btn {
+  .def_btns();
+  color: @def;
+  background: @warn;
+  border: 1px solid @warn_hover;
+  border-radius: @radius;
+
+  &:hover {
+    color: @def_hover;
+    background: @warn_hover;
+    box-shadow: 0 0 5px @warn_hover;
+  }
+}
+
+.info_btn {
+  .def_btns();
+  color: @def;
+  background: @info;
+  border: 1px solid @info_hover;
+  border-radius: @radius;
+
+  &:hover {
+    color: @def_hover;
+    background: @info_hover;
+    box-shadow: 0 0 5px @info_hover;
+  }
+}
+
+.success_btn {
+  .def_btns();
+  color: @def;
+  background: @success;
+  border: 1px solid @success_hover;
+  border-radius: @radius;
+
+  &:hover {
+    color: @def_hover;
+    background: @success_hover;
+    box-shadow: 0 0 5px @success_hover;
+  }
+}
+
+.danger_btn {
+  .def_btns();
+  color: @def;
+  background: @danger;
+  border: 1px solid @danger_hover;
+  border-radius: @radius;
+
+  &:hover {
+    color: @def_hover;
+    background: @danger_hover;
+    box-shadow: 0 0 5px @danger_hover;
+  }
+}
+
+.bg {
+  width: 100%;
+  height: 100vh;
+  background: @theme_img1;
+  background-size: cover;
+  display: flex;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+  flex: auto;
+}

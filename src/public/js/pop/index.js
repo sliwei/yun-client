@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-const style = require('./popup.scss'); // css 样式
+const style = require('./popup.less'); // css 样式
 
 class Html extends Component {
   componentWillReceiveProps(nextProps) {

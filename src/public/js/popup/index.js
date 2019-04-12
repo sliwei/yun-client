@@ -9,7 +9,7 @@
  * index: 层级权重 type: int (如果一个页面有多个弹窗，而且需要层级响应，可根据先后设置indx的权重，越大层级越高)
  */
 import React, {Component} from 'react'
-import css from './popup.scss'
+import css from './popup.less'
 
 class Popup extends Component {
   constructor() {

@@ -5,7 +5,7 @@ import {login} from 'Api/login';
 import {code} from 'Api/verification';
 import {Link} from 'react-router-dom'
 import {Form, Icon, Input, Button, Checkbox, Carousel, message, Tooltip} from 'antd';
-import css from './login.scss'
+import css from './login.less'
 import MD5 from 'js-md5';
 
 const FormItem = Form.Item;
