@@ -74,7 +74,7 @@
   position: absolute;
   right: 15px;
   top: 14px;
-  color: $def_hover;
+  color: @def_hover;
   height: 16px;
   width: 16px;
   line-height: initial;
@@ -89,13 +89,13 @@
   right: 7px;
   transform: rotate(45deg);
   transition: transform .3s;
-  background: $def_hover;
+  background: @def_hover;
   height: 16px;
   width: 2px;
 }
 
 .close:after {
-  background: $def_hover;
+  background: @def_hover;
   content: "";
   height: 2px;
   left: -7px;
@@ -110,13 +110,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: $deep_hover;
+  background-color: @deep_hover;
   opacity: 0.3;
 }
 
 @mixin popup {
   position: fixed;
-  background-color: $def_hover;
+  background-color: @def_hover;
   box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 50px;
   border-radius: 2px;
 }
@@ -139,9 +139,9 @@
   height: 40px;
   line-height: 40px;
   font-size: 14px;
-  color: $def_hover;
+  color: @def_hover;
   overflow: hidden;
-  background-color: $info_hover;
+  background-color: @info_hover;
   border-radius: 2px 2px 0 0;
 }
 

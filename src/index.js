@@ -6,7 +6,7 @@ import {Route, Switch, HashRouter} from 'react-router-dom'
 import './public/css/nprogress.css'
 import {Icon, Modal} from 'antd'
 import Bundle from './bundle';
-import css from './index.scss'
+import css from './index.less'
 
 import Index from './components/index'
 import LoginController from 'bundle-loader?lazy&name=login!./components/login'

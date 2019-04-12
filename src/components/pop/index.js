@@ -1,6 +1,6 @@
 import React from 'react';
 import {Popup, Modal} from 'Public'
-import css from './pop.scss'
+import css from './pop.less'
 
 export default class Index extends React.Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './main.scss'
+import css from './main.less'
 import {Route, Link} from 'react-router-dom'
 import {message, Modal} from 'antd'
 

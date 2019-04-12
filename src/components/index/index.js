@@ -1,6 +1,6 @@
 import QueueAnim from 'rc-queue-anim';
 import React from 'react';
-import css from './index.scss'
+import css from './index.less'
 import {info} from 'Api/login';
 import {Route, Redirect, Switch as RouterSwitch, Link} from 'react-router-dom'
 import Bundle from '../../bundle';

@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './fzf.scss'
+import css from './fzf.less'
 
 export default class Index extends React.Component {
   goIndex = () => this.props.history.push("/");

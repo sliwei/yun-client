@@ -5,7 +5,7 @@
 }
 
 .txt_danger {
-  color: $danger_hover !important;
+  color: @danger_hover !important;
 }
 
 .box {
@@ -13,7 +13,7 @@
   top: 20%;
   right: 10%;
   padding: 20px 50px;
-  background: $def_hover;
+  background: @def_hover;
   opacity: .6;
   transition: opacity .3s;
 
@@ -74,12 +74,12 @@
 }
 
 .login_manu {
-  width: calc(100% - 207px);
+  width: e("calc(100% - 207px)");
   text-align: right;
 
   li {
     display: inline-block;
-    color: $def_hover;
+    color: @def_hover;
     margin: 20px;
     cursor: pointer;
   }
@@ -90,8 +90,8 @@
 }
 
 .vip {
-  background: $danger;
-  color: $def_hover;
+  background: @danger;
+  color: @def_hover;
   padding: 4px 10px;
   border-radius: 20px;
 }
@@ -116,7 +116,7 @@
   bottom: 20px;
   left: 100px;
   position: absolute;
-  color: $def_hover;
+  color: @def_hover;
   font-size: 46px;
 
   img {

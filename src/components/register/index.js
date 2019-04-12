@@ -3,7 +3,7 @@ import {register} from 'Api/login';
 import {code} from 'Api/verification';
 import {Link} from 'react-router-dom';
 import {Modal, Form, Icon, Input, Button, Checkbox, Tooltip, message} from 'antd';
-import css from './register.scss';
+import css from './register.less';
 import MD5 from 'js-md5';
 
 const FormItem = Form.Item;

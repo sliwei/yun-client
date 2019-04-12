@@ -50,12 +50,9 @@ yun-client
     public              // 资源
     bundle.js           // react路由切割
     config.js           // 路由菜单
-    defined.less        // 默认样式
     index.js            // 主入口
     index.scss          // 主入口样式
     theme.scss          // 主题样式
-    theme_dark.scss     // 主题1
-    theme_light.scss    // 主题2
   .babelrc              // babel配置
   index.html            // html模板
   package.json          // 插件配置

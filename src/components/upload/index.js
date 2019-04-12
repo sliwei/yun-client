@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './index.scss'
+import css from './index.less'
 import {upload} from 'Api/file';
 
 import {Progress, Icon, message, Alert} from 'antd'

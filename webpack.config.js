@@ -7,7 +7,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 const fs = require('fs');
 const lessToJs = require('less-vars-to-js');
-const themeVariables = lessToJs(fs.readFileSync(path.join(__dirname, './src/defined.less'), 'utf8'));
+const themeVariables = lessToJs(fs.readFileSync(path.join(__dirname, './src/theme.less'), 'utf8'));
 // http://www.cnblogs.com/auok/p/6420843.html
 
 const conf = require('./config');
@@ -169,8 +169,8 @@ module.exports = {
         }),
       },
       {
-        test: /\.scss$/,
-        exclude: path.resolve(__dirname, 'node_modules/@blueprintjs'),  //这个路径要写准确，否则报错
+        test: /\.less$/,
+        exclude: path.resolve(__dirname, 'node_modules/antd'),  //这个路径要写准确，否则报错
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           publicPath: '../',
@@ -194,10 +194,9 @@ module.exports = {
               }
             },
             {
-              loader: 'sass-loader',
+              loader: 'less-loader',
               options: {
                 sourceMap: true,
-                outputStyle: 'expanded'
               }
             },
           ]
