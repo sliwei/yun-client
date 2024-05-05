@@ -22,7 +22,7 @@ const test = {
 const prod = {
   NODE_ENV: 'production',
   dist: './dist/prod',
-  publicPath: 'https://i.bstu.cn/static/yun-client/',
+  publicPath: '/',
   url: {
     baseURL: '"https://api.bstu.cn"',
   }
